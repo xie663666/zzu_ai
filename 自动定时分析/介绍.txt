@@ -1,0 +1,21 @@
+ 第四步：自动定时分析（设定榨汁时间）
+方法1（简单版） - 使用Windows任务计划：
+1. 写一个analyze.py文件包含分析代码
+2. 右击文件 → 创建快捷方式
+3. 打开"任务计划程序" → 创建任务 → 设置每天7点运行
+
+方法2（专业版） - 用Python定时框架：
+python
+import schedule
+import time
+
+def daily_job():
+    print("开始榨汁...（分析数据）")
+     这里放连接数据库和AI分析的代码
+
+ 设定每天早上7点启动
+schedule.every().day.at("07:00").do(daily_job)
+
+while True:
+    schedule.run_pending()
+    time.sleep(60)   每分钟检查一次时间

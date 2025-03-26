@@ -1,0 +1,16 @@
+第二步：连接数据库（打开冰箱）
+示例代码（就像操作微波炉按键）：
+python
+ 数据库密码等参数类比冰箱的开门密码
+import pymysql
+conn = pymysql.connect(
+    host='localhost',   冰箱位置
+    user='root',        主人名字
+    password='123456',  开门密码 
+    database='mine'     选择水果层
+)
+
+ 用pandas这个夹子取出苹果（数据）
+import pandas as pd
+sql = "SELECT  FROM sensor_data WHERE time > '昨天'"
+data = pd.read_sql(sql, conn)
