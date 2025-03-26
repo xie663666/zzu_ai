@@ -1,0 +1,14 @@
+ 第三步：训练AI模型（组装榨汁机）
+推荐使用现成模板（GitHub搜这些项目）：
+1. MineSafety-ML（预置矿井安全模型）
+2. AutoML-For-Beginners（自动AI训练工具）
+
+基础版自制步骤：
+python
+from sklearn.ensemble import RandomForestClassifier
+
+ 教AI认危险（类似教小孩认苹果和梨）
+model = RandomForestClassifier()
+model.fit(
+    data[['温度', '湿度', '震动值']],   输入特征（水果颜色、形状）
+    data['是否危险']                    标签（是苹果还是梨）
